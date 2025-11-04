@@ -1,0 +1,28 @@
+.chat-item {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: black;
+}
+
+.ava {
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 8px;
+}
+
+.nickname {
+    font-weight: bold;
+}
+
+.meta {
+    flex-shrink: 0;
+}

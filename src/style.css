@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --border-color: grey;
 }
 
 body {
@@ -25,16 +27,15 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
   width: 100%;
 }
 
 .chats {
   width: 300px;
-  background: grey;
 }
 
 .active {
   width: 100%;
   background: green;
 }
+
