@@ -30,7 +30,7 @@ export const ListenChatClick = (elementWithChats, callback) => {
         const listenerCallback = (e) => {
             e.preventDefault();
             const clickedIndex = a.href.split('/').at(-1);
-            callback(clickedIndex);
+            callback(+clickedIndex);
         }
 
         elPool.push([a, listenerCallback])

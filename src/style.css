@@ -3,16 +3,20 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  /*color-scheme: light dark;*/
+  /*color: rgba(0, 0, 0, 0.87);*/
+  /*background-color: #ffffff;*/
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --border-color: grey;
+  --border-color: #ccc;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -20,22 +24,33 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 2rem;
 }
 
 #app {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 48px rgba(0, 0, 0, 0.12);
+  height: 90vh;
+  justify-content: space-between;
 }
 
 .chats {
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .active {
-  width: 100%;
-  background: lightgray;
+  flex-grow: 1;
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-direction: column;
 }
-

@@ -1,0 +1,19 @@
+.ac-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.ac-message {
+    border: 1px solid black;
+    padding: 8px;
+    margin-bottom: 4px;
+    width: 300px;
+}
+
+.ac-message_left {
+    justify-content: flex-start;
+}
+
+.ac-message_right {
+    justify-content: flex-end;
+}
