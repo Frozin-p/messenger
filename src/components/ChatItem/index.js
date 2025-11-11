@@ -11,12 +11,29 @@ export const ChatItemComponent = (nickname, avatar, text, time, id) => {
         <div class="meta">${time}</div>
       </a>
     `
-  }
+}
 
-export const ListenChatClick = (elementWithChats) => {
+let elPool = [
+    // [a, () => {}]
+    // [a, () => {}]
+]
+
+const UnlistenChatClick = () => {
+    elPool.forEach(([a, listenerCallback]) => a.removeEventListener('click', listenerCallback))
+    elPool = []
+}
+
+export const ListenChatClick = (elementWithChats, callback) => {
+    UnlistenChatClick()
+
     elementWithChats.querySelectorAll('a').forEach((a) => {
-        a.addEventListener('click', (e) => {
+        const listenerCallback = (e) => {
             e.preventDefault();
-        });
+            const clickedIndex = a.href.split('/').at(-1);
+            callback(clickedIndex);
+        }
+
+        elPool.push([a, listenerCallback])
+        a.addEventListener('click', listenerCallback);
     })
 }
